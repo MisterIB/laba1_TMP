@@ -22,11 +22,11 @@ const Form = () => {
 
         axios.post('http://localhost:5000/items', { name, manufacturer })
             .then(() => {
-                console.log("Data successfully sent to server");
+                console.log("Данные успешно отправлены на сервер");
                 navigate('/')
             })
             .catch((error) => {
-                console.error("Error sending data to server: ", error);
+                console.error("Ошибка отправки данных на сервер: ", error);
             });
     };
 
@@ -45,7 +45,7 @@ const Form = () => {
                 <br/>
         
                 <label>
-                    Статус:
+                    Производитель:
                     <input
                         type="text"
                         value={manufacturer}
