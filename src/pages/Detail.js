@@ -80,7 +80,7 @@ const Detail = () => {
           <div className="buttons_group">
             <button onClick={() => navigate("/")}>Назад</button>
             <button onClick={handleDelete}>
-              Удалить компонент
+              Удалить
             </button>
             <button onClick={() => setIsEditing(true)}>
               Изменить
