@@ -14,29 +14,15 @@ const Home = () => {
                 const response = await axios.get("http://localhost:5000/items");
                 setData(response.data);
                 setLoading(false)
-                console.log("Data loaded successfully ", response.data);
+                console.log("Данные загружены: ", response.data);
             } catch (error) {
-                console.error("Error in query: ", error);
+                console.error("Ошибка запроса: ", error);
                 setLoading(false);
             }
         };
 
         loadData();
     }, []);
-
-    /*return (
-        <div>
-            <h1>Device list</h1>
-            <ul>
-                {data.map(item => (
-                    <li key={item.id}>
-                        <Link to={`/detail/${item.id}`}> {item.name} </Link>
-                    </li>
-                ))}
-            </ul>
-            <Link to="/add">Add device</Link>
-        </div>
-    );*/
 
     return (
         <div className="main_page">
